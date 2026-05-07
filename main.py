@@ -12,11 +12,11 @@ def generate_password():
                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
                'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-    symbols = ['!', '#', '%', '&', '?', '*', '+', '<', '>', '+', '-']
+    symbols = ['!', '#', '%', '&', '?', '*', '+', '<', '>', '+', '-'] # Can add more symbols if wanted
 
-    password_letters = [choice(letters) for _ in range(randint(8, 10))]
-    password_numbers = [choice(numbers) for _ in range(randint(2, 4))]
-    password_symbols = [choice(symbols) for _ in range(randint(2, 4))]
+    password_letters = [choice(letters) for _ in range(randint(6, 8))] # change these numbers for amount of letters
+    password_numbers = [choice(numbers) for _ in range(randint(1, 3))] # change these numbers for amount of numbers
+    password_symbols = [choice(symbols) for _ in range(randint(1, 3))] # change these numbers for amount of symbols
 
     password_list = password_letters + password_numbers + password_symbols
     shuffle(password_list)
@@ -94,7 +94,7 @@ window.config(padx=50, pady=50, bg="white")
 
 canvas = Canvas(width=200, height=200, bg="white", highlightthickness=0)
 logo_png = PhotoImage(file="logo.png")
-canvas.create_image(110, 110, image=logo_png)
+canvas.create_image(120, 110, image=logo_png)
 canvas.grid(column=1, row=0)
 
 website_label = Label(text="Website:", bg="white")
